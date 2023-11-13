@@ -2,19 +2,23 @@
 #include "Driver_GPIO.h"
 #include "Driver_ADC.h"
 #include "Driver_Timer.h"
+#include "Driver_UART.h"
 
-void Callback(void);
+void Callback(char val);
 
-int val;
+
 
 int main(void) 
 {
-	Init_ADC();
+	MyUART_Init(2, Callback);
+	MyGPIO_Init(GPIOA, 6, Out_Ppull);
 
 	do{
-		val= ADC_GetValue(0);
+		
 	}while(1);
 }
 
-
+void Callback(char val){
+	MyGPIO_Toggle(GPIOA, 6);
+}
 

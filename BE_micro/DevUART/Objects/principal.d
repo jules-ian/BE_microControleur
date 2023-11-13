@@ -10,3 +10,4 @@
 .\objects\principal.o: ..\Drivers\Include\Driver_GPIO.h
 .\objects\principal.o: ..\Drivers\Include\Driver_ADC.h
 .\objects\principal.o: ..\Drivers\Include\Driver_Timer.h
+.\objects\principal.o: ..\Drivers\Include\Driver_UART.h

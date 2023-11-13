@@ -22,18 +22,32 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 U:\BE_micro\DevGPIO\gpio.uvprojx
-Project File Date:  09/26/2023
+Project File Date:  10/06/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Reel'
+Rebuild target 'Reel'
+assembling startup_stm32f10x_md.s...
+compiling system_stm32f10x.c...
 compiling Driver_GPIO.c...
-..\Drivers\Source\Driver_GPIO.h(21): warning:  #1-D: last line of file ends without a newline
+..\Drivers\Include\Driver_GPIO.h(21): warning:  #1-D: last line of file ends without a newline
   			
-..\Drivers\Source\Driver_GPIO.c: 1 warning, 0 errors
+..\Drivers\Source\Driver_GPIO.c(78): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\Source\Driver_GPIO.c: 2 warnings, 0 errors
+compiling Principal.c...
+..\Drivers\Include\Driver_GPIO.h(21): warning:  #1-D: last line of file ends without a newline
+  			
+Source\Principal.c(8): warning:  #61-D: integer operation result is out of range
+  	GPIOA->CRL = GPIOA->CRL & ~(0xFF << 24)  | (21 << 26); //0101 0100 0... = pin 7 push pull
+Source\Principal.c(6): warning:  #177-D: variable "buttonVal"  was declared but never referenced
+  	int buttonVal;
+Source\Principal.c(37): warning:  #1-D: last line of file ends without a newline
+  //void MyGPIO_Init(GPIO_TypeDef * GPIO, char GRPIO_Pin, char GPIO_Conf);
+Source\Principal.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=516 RO-data=252 RW-data=0 ZI-data=1024  
-".\Objects\gpio_reel.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=952 RO-data=252 RW-data=0 ZI-data=1024  
+".\Objects\gpio_reel.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -60,10 +74,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
       Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

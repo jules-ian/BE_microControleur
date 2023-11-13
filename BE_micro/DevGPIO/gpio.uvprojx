@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;..\Drivers\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -402,6 +402,16 @@
               <FileName>Driver_GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\Driver_GPIO.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Include</GroupName>
+          <Files>
+            <File>
+              <FileName>Driver_GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\Driver_GPIO.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -746,7 +756,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;..\Drivers\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -809,6 +819,16 @@
               <FileName>Driver_GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\Driver_GPIO.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Include</GroupName>
+          <Files>
+            <File>
+              <FileName>Driver_GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\Driver_GPIO.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -10,15 +10,19 @@ void Callback(char val);
 
 int main(void) 
 {
-	MyUART_Init(2, Callback);
+	MyUART_Init(2);
 	MyGPIO_Init(GPIOA, 6, Out_Ppull);
 
 	do{
-		
+		if (getValue2() == 'o'){
+			MyGPIO_Toggle(GPIOA, 6);
+		}
 	}while(1);
 }
 
+/*
 void Callback(char val){
 	MyGPIO_Toggle(GPIOA, 6);
 }
+*/
 

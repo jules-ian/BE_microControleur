@@ -22,7 +22,7 @@ void MyMoteur_Init(){
 
 }
 
-void MyMoteur_Set_Power(char value){
+void MyMoteur_Set_Power(signed char value){
 	
 	if(value < 0){
 		MyGPIO_Set(GPIOA, 1);

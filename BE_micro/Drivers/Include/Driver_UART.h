@@ -5,9 +5,11 @@
 void MyUART_Init(char usart);
 
 
-char getValue1(void);
-char getValue2(void);
-char getValue3(void);
+signed char getValue1(void);
+signed char getValue2(void);
+signed char getValue3(void);
+
+void MyUART_send(char* val, char usart);
 
 
 #endif

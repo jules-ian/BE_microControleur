@@ -1,5 +1,6 @@
 #include "stm32f10x.h"
 #include "Driver_UART.h"
+#include <string.h>
 
 #define PCLK1 36000000
 #define PCLK2 72000000
@@ -71,22 +72,46 @@ void USART3_IRQHandler(void){
 	value3 = USART3->DR;
 }
 
-char getValue1(void){ // On remet la valeur lue a 0 après l'avoir lue
-	char tmp = value1;
+signed char getValue1(void){ // On remet la valeur lue a 0 après l'avoir lue
+	signed char tmp = value1;
 	//value1 = 0;
 	return tmp;
 }
 
 
-char getValue2(void){
-	char tmp = value2;
+signed char getValue2(void){
+	signed char tmp = value2;
 	//value2 = 0;
 	return tmp;
 }
 
 
-char getValue3(void){
-	char tmp = value3;
+signed char getValue3(void){
+	signed char tmp = value3;
 	//value3 = 0;
 	return tmp;
+}
+
+void MyUART_send(char* val, char usart){
+	int i = 0;
+	
+	for(i = 0; i < strlen(val); i++){
+		switch(usart){
+		case 1:
+			while(!(USART1->SR & USART_SR_TC)){}
+			USART1->DR = val[i];
+			break;
+		case 2:
+			while(!(USART2->SR & USART_SR_TC)){}
+			USART2->DR = val[i];
+			break;
+			
+		case 3:
+			while(!(USART3->SR & USART_SR_TC)){}
+			USART3->DR = val[i];
+			break;
+	}
+	}
+	
+	
 }

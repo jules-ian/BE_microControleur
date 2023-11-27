@@ -1,6 +1,6 @@
 --cpu Cortex-M3
 ".\objects\principal.o"
-".\objects\servbauto.o"
+".\objects\gestion_auto_voile.o"
 ".\objects\driver_gpio.o"
 ".\objects\driver_timer.o"
 ".\objects\startup_stm32f10x_md.o"

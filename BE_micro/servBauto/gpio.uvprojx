@@ -389,14 +389,14 @@
               <FilePath>.\Source\Principal.c</FilePath>
             </File>
             <File>
-              <FileName>servBauto.c</FileName>
+              <FileName>Gestion_auto_voile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\servBauto.c</FilePath>
+              <FilePath>.\Source\Gestion_auto_voile.c</FilePath>
             </File>
             <File>
-              <FileName>servBauto.h</FileName>
+              <FileName>Gestion_auto_voile.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Source\servBauto.h</FilePath>
+              <FilePath>.\Source\Gestion_auto_voile.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -771,7 +771,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\Drivers\Include;..\Drivers\Source</IncludePath>
+              <IncludePath>.\Include;..\Drivers\Include;..\Drivers\Source;.\Source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -821,14 +821,14 @@
               <FilePath>.\Source\Principal.c</FilePath>
             </File>
             <File>
-              <FileName>servBauto.c</FileName>
+              <FileName>Gestion_auto_voile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\servBauto.c</FilePath>
+              <FilePath>.\Source\Gestion_auto_voile.c</FilePath>
             </File>
             <File>
-              <FileName>servBauto.h</FileName>
+              <FileName>Gestion_auto_voile.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Source\servBauto.h</FilePath>
+              <FilePath>.\Source\Gestion_auto_voile.h</FilePath>
             </File>
           </Files>
         </Group>

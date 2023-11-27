@@ -80,16 +80,16 @@ void PWM_SetCycle(TIM_TypeDef * Timer, char Channel, short int ccr){ // ccr = ra
 	switch(Channel){ 
 		
 		case 1:
-			Timer->CCR1 = Timer->ARR*ccr/1000;
+			Timer->CCR1 = ccr;
 		break;
 		case 2:
-			Timer->CCR2 = Timer->ARR*ccr/1000;
+			Timer->CCR2 = ccr;
 		break;
 		case 3:
-			Timer->CCR3 =Timer->ARR*ccr/1000;
+			Timer->CCR3 =ccr;
 		break;
 		case 4:
-			Timer->CCR4 = Timer->ARR*ccr/1000;
+			Timer->CCR4 = ccr;
 		break;
 	}
 }

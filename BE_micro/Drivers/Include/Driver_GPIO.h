@@ -18,4 +18,3 @@ void MyGPIO_Reset(GPIO_TypeDef * GPIO, char GPIO_Pin);
 void MyGPIO_Toggle(GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 #endif
-			

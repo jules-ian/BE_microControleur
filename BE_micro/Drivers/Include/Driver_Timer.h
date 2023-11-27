@@ -14,4 +14,3 @@ void PWM_SetCycle(TIM_TypeDef * Timer, char Channel, short int ccr);
 
 
 #endif
-			

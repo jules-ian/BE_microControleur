@@ -3,7 +3,7 @@
 #include "stm32f10x.h"
 
 void MyMoteur_Init(void);
-void MyMoteur_Set_Power(char value);
+void MyMoteur_Set_Power(signed char value);
 
 #endif
 			

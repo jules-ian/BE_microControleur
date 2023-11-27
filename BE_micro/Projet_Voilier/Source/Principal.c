@@ -10,14 +10,16 @@ void Callback(char val);
 
 
 int main(void) 
-{ //ça tourne pas dans le meme sens et ça change pas de vitesse à 100 9C et à -100 64 dans le registre DR
+{ //ça tourne pas dans le meme sens et ça change pas de vitesse à 100 0x009C et à -100 0x0064 dans le registre DR
 	MyUART_Init(1);
-	MyGPIO_Init(GPIOA,9,AltOut_Ppull);
-	MyGPIO_Init(GPIOA,10, In_Floating);
+	MyGPIO_Init(GPIOA,9,AltOut_Ppull); // USART TX
+	MyGPIO_Init(GPIOA,10, In_Floating); // USART RX
 	MyMoteur_Init();
+	MyUART_send("salut le bato\n", 1);
 
 	do{
 		MyMoteur_Set_Power(getValue1());
+	  MyUART_send("2e ligne", 1);
 	}while(1);
 }
 

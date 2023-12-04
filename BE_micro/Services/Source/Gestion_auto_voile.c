@@ -8,13 +8,15 @@ void gestion_init(){
 	
 	MyGPIO_Init(GPIOA,6,In_Floating); //TIM3 CH1
 	MyGPIO_Init(GPIOA,7,In_Floating); //TIM3 CH2
-	//on choit TIM3 pout coder imcrémentaire en PA8
+
+	MyGPIO_Init(GPIOA,8,In_Floating); //pour IDC de girouette
 
 	
 	MyTimer_Base_Init(TIM3,1439,0);
 	MyTimer_Base_Start(TIM3);
 	TIM3->SMCR&=~(0x7);
-	TIM3->SMCR|=0x3;// à voir
+	TIM3->SMCR|=0x3;// Ã  voir
+	while((GPIOA->IDR&0x1<<8)==0){}; //quand girouette est Ã  la position init, on commence
 	TIM3->CNT=0;
 
 }
@@ -47,10 +49,7 @@ int calcul_rapport_cyclique(int angle_vente){
 }
 void gestion_mise_a_jour(){
 	
-		//int test=0;
-		//while (test==0){
-			//test=(GPIOB->IDR &(0x01<<6));
-		//}
+	
 	
 		int cyclique;
 

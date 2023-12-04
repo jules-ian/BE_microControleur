@@ -13,13 +13,12 @@
 #define Pin_PWM_Moteur 0
 
 /*
-#define ... TIM3
-#define ... GPIOA 
-#define ... 8
-#define ... GPIOA
-#define ... 6
-#define ... GPIOA
-#define ... 7
-#define ... GPIOB
-#define ... 6
+#define TIMER_Giroutte TIM3
+#define TIMER_Voile TIM4
+#define GPIO_Signal_Voie_A GPIOA
+#define Pin_Signal_Voie_A 6
+#define GPIO_Signal_Voie_B GPIOA
+#define Pin_Signal_Voie_B 7
+#define GPIO_PWM_Servo GPIOB
+#define Pin_PWM_Servo 6
 */

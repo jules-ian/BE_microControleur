@@ -458,6 +458,16 @@
               <FileType>1</FileType>
               <FilePath>..\Services\Source\Service_Moteur.c</FilePath>
             </File>
+            <File>
+              <FileName>Gestion_auto_voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Gestion_auto_voile.h</FilePath>
+            </File>
+            <File>
+              <FileName>Gestion_auto_voile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Gestion_auto_voile.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -919,6 +929,16 @@
               <FileName>Service_Moteur.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Services\Source\Service_Moteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>Gestion_auto_voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Gestion_auto_voile.h</FilePath>
+            </File>
+            <File>
+              <FileName>Gestion_auto_voile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Gestion_auto_voile.c</FilePath>
             </File>
           </Files>
         </Group>

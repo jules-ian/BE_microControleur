@@ -5,6 +5,7 @@
 #include "Driver_UART.h"
 #include "Service_Moteur.h"
 #include "io.h"
+#include "Gestion_auto_voile.h"
 
 
 int main(void) 
@@ -13,12 +14,15 @@ int main(void)
 	MyGPIO_Init(GPIO_USART_TX, Pin_USART_TX, AltOut_Ppull); // USART TX
 	MyGPIO_Init(GPIO_USART_RX, Pin_USART_RX, In_Floating); // USART RX
 	MyMoteur_Init();
+	gestion_init();
 
 	do{
-		
+			gestion_mise_a_jour();
+		/*
 		MyMoteur_Set_Power(getValue1());
 		MyUART_send("salut le bato\n", 1); //14 caractères envoyé peuvent prendre + de 100 ms, donc il faut setup un systick + grand ( 150 ms par exemple )
 	  MyUART_send("2e ligne", 1);
+		*/
 	
 	}while(1);
 }

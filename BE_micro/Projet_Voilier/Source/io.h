@@ -21,4 +21,6 @@
 #define Pin_Signal_Voie_B 7
 #define GPIO_PWM_Servo GPIOB
 #define Pin_PWM_Servo 6
+#define GPIO_IDX_GIROUETTE GPIOA
+#define Pin_IDX_Girouette 8
 */

@@ -4,28 +4,24 @@
 #include "Driver_Timer.h"
 #include "Driver_UART.h"
 #include "Service_Moteur.h"
-
-void Callback(char val);
-
+#include "io.h"
 
 
 int main(void) 
 { //ça tourne pas dans le meme sens et ça change pas de vitesse à 100 0x009C et à -100 0x0064 dans le registre DR
-	MyUART_Init(1);
-	MyGPIO_Init(GPIOA,9,AltOut_Ppull); // USART TX
-	MyGPIO_Init(GPIOA,10, In_Floating); // USART RX
+	MyUART_Init(USART_Telecommande);
+	MyGPIO_Init(GPIO_USART_TX, Pin_USART_TX, AltOut_Ppull); // USART TX
+	MyGPIO_Init(GPIO_USART_RX, Pin_USART_RX, In_Floating); // USART RX
 	MyMoteur_Init();
-	MyUART_send("salut le bato\n", 1);
 
 	do{
+		
 		MyMoteur_Set_Power(getValue1());
+		MyUART_send("salut le bato\n", 1); //14 caractères envoyé peuvent prendre + de 100 ms, donc il faut setup un systick + grand ( 150 ms par exemple )
 	  MyUART_send("2e ligne", 1);
+	
 	}while(1);
 }
 
-/*
-void Callback(char val){
-	MyGPIO_Toggle(GPIOA, 6);
-}
-*/
+
 

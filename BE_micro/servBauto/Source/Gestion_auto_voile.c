@@ -52,9 +52,8 @@ void gestion_mise_a_jour(){
 			//test=(GPIOB->IDR &(0x01<<6));
 		//}
 		int cyclique;
-		while(1){
+		
 		cyclique=calcul_rapport_cyclique((TIM3->CNT)/4);
-		 PWM_SetCycle(TIM4,1,TIM4->ARR*cyclique/1000);
-		}
+		PWM_SetCycle(TIM4,1,TIM4->ARR*cyclique/1000);
 }
 

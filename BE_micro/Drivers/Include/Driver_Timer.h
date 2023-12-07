@@ -11,6 +11,9 @@ void MyTimer_ActiveIT(TIM_TypeDef * Timer, char Prio, void (*func)(void));
 void MyTimer_PWM(TIM_TypeDef * Timer, char Channel);
 void PWM_SetCycle(TIM_TypeDef * Timer, char Channel, short int ccr);
 
+int Get_angle_vent(TIM_TypeDef * Timer);
+void init_TIM_Angle(TIM_TypeDef * Timer);
+
 #define MyTimer_Base_Start(Timer) Timer->CR1 |= TIM_CR1_CEN;
 #define MyTimer_Base_Stop(Timer) Timer->CR1 &= ~TIM_CR1_CEN;
 

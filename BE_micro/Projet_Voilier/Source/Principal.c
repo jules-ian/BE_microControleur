@@ -16,7 +16,7 @@ void SysTick_Handler(void){
 	flag = 1;
 	counter++;
 	//Les 2 fonctions ci-dessous sont très rapide donc on les mets directement dans le Handler, tandis que MyUART_send a un risque de durer plus longtemps et doit pouvoir être interrompu ( donc dans le while )
-			gestion_mise_a_jour();
+			gestion_mise_a_jour(TIMER_Giroutte,TIMER_Voile);
 			MyMoteur_Set_Power(getValue1());
 }
 
@@ -27,12 +27,10 @@ int main(void)
 	MyGPIO_Init(GPIO_USART_TX, Pin_USART_TX, AltOut_Ppull); // USART TX
 	MyGPIO_Init(GPIO_USART_RX, Pin_USART_RX, In_Floating); // USART RX
 	MyMoteur_Init();
-	gestion_init();
-	
+	gestion_init_girouette(TIMER_Giroutte,GPIO_Girouette,Pin_Signal_Voie_A,Pin_Signal_Voie_B,Pin_IDX_Girouette);
+	gestion_init_voile(TIMER_Voile,GPIO_PWM_Servo,Pin_PWM_Servo);
 	SysTick->CTRL |= 0b111;
 	SysTick->LOAD = SystickPeriod;
-	
-	
 	do{
 		
 		if(flag){

@@ -29,7 +29,7 @@ int main(void)
 	MyMoteur_Init();
 	gestion_init_girouette(TIMER_Giroutte,GPIO_Girouette,Pin_Signal_Voie_A,Pin_Signal_Voie_B,Pin_IDX_Girouette);
 	gestion_init_voile(TIMER_Voile,GPIO_PWM_Servo,Pin_PWM_Servo);
-	SysTick->CTRL |= 0b111;
+	SysTick->CTRL |= 0x7;
 	SysTick->LOAD = SystickPeriod;
 	do{
 		
